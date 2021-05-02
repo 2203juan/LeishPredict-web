@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center">
+                LeishPredict
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h4 class="alert alert-light text-center">An Applied Machine Learning Undergraduate Thesis
+                in Health Sciences.</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid" src="{{ url_for('static', filename= 'img/portada.svg') }}" alt="Card image cap">
+        </div>
+    </div>
+</div>
+{% endblock %}
