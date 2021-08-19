@@ -10,7 +10,7 @@
     </div>
     <div class="row h-100 justify-content-center align-items-center">
         <div class="col-xs-12 col-md-6 col-lg-6 text-center formcolor">
-            <form method="POST" action="/agregar_restaurante" enctype="multipart/form-data">
+            <form method="POST" action="/prediction" enctype="multipart/form-data">
 
 
 
@@ -25,8 +25,8 @@
                                 <div class="col-12 my-1">
                                     <label class="mr-sm-2" for="inlineFormCustomSelect"><strong>Gender</strong></label>
                                     <select class="custom-select mr-sm-2" id="gender" name="gender">
-                                        <option value="female" selected>Female</option>
-                                        <option value="male">Male</option>
+                                        <option value="2" selected>Female</option>
+                                        <option value="1">Male</option>
                                     </select>
                                 </div>
                             </div>
@@ -36,12 +36,12 @@
                                     <label class="mr-sm-2"
                                         for="inlineFormCustomSelect"><strong>Ethnicity</strong></label>
                                     <select class="custom-select mr-sm-2" id="ethnicity" name="ethnicity">
-                                        <option value="afrocolombian" selected>Afro-Colombian</option>
-                                        <option value="indigenous">Indigenous</option>
-                                        <option value="mixedrace">Mixed race</option>
-                                        <option value="white">White</option>
-                                        <option value="mulatto">Mulatto</option>
-                                        <option value="other">Other</option>
+                                        <option value="1" selected>Afro-Colombian</option>
+                                        <option value="2">Indigenous</option>
+                                        <option value="3">Mixed race</option>
+                                        <option value="4">White</option>
+                                        <option value="5">Mulatto</option>
+                                        <option value="6">Other</option>
 
                                     </select>
                                 </div>
@@ -59,23 +59,23 @@
                                     <label class="mr-sm-2" for="inlineFormCustomSelect"><strong>Infection
                                             Department</strong></label>
                                     <select class="custom-select mr-sm-2" id="department" name="department">
-                                        <option value="narino" selected>Nariño</option>
-                                        <option value="choco">Chocó</option>
-                                        <option value="cauca">Cauca</option>
-                                        <option value="other">Other</option>
+                                        <option value="Narino" selected>Nariño</option>
+                                        <option value="Choco">Chocó</option>
+                                        <option value="Cauca">Cauca</option>
+                                        <option value="Other">Other</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="formGroupExampleInput"><strong>Weight</strong></label>
-                                <input type="number" min="0" class="form-control" id="weight" name="weight"
+                                <input type="number" step="0.01" min="0" class="form-control" id="weight" name="weight"
                                     placeholder="Write patient weight">
                             </div>
 
                             <div class="form-group">
                                 <label for="formGroupExampleInput"><strong>Height</strong></label>
-                                <input type="number" min="0" class="form-control" id="height" name="height"
+                                <input type="number" step="0.01" min="0" class="form-control" id="height" name="height"
                                     placeholder="Write patient height">
                             </div>
                         </div>
@@ -106,14 +106,14 @@
 
                             <div class="form-group">
                                 <label for="formGroupExampleInput"><strong>eb_lc_ulcera_area_1</strong></label>
-                                <input type="number" min="0" class="form-control" id="eb_lc_ulcera_area_1"
+                                <input type="number" step="0.01" min="0" class="form-control" id="eb_lc_ulcera_area_1"
                                     name="eb_lc_ulcera_area_1" placeholder="Write eb_lc_ulcera_area_1">
                             </div>
 
 
                             <div class="form-group">
                                 <label for="formGroupExampleInput"><strong>Glucantime Dosis</strong></label>
-                                <input type="number" min="0" class="form-control" id="dosis" name="dosis"
+                                <input type="number"  step="0.01" min="0" class="form-control" id="dosis" name="dosis"
                                     placeholder="Write Glucantime Dosis Prescripted">
                             </div>
 
