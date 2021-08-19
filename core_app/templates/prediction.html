@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2 class="text-center alert alert-light">Enter data to predict cure or fail</h2>
+            <h2 class="text-center alert alert-light">Enter Patient Information</h2>
         </div>
     </div>
     <div class="row h-100 justify-content-center align-items-center">
@@ -13,102 +13,120 @@
             <form method="POST" action="/agregar_restaurante" enctype="multipart/form-data">
 
 
-                <div class="form-row align-items-center">
-                    <div class="col-12 my-1">
-                        <label class="mr-sm-2" for="inlineFormCustomSelect">Choose patient gender</label>
-                        <select class="custom-select mr-sm-2" id="gender" name="gender">
-                            <option value="female" selected>Female</option>
-                            <option value="male">Male</option>
-                        </select>
+
+                <div class="p-1 mb-2 footer_color text-white">
+                    <h1>Patient Demographics</h1>
+                </div>
+
+                <div class="container bg-light">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-row align-items-center">
+                                <div class="col-12 my-1">
+                                    <label class="mr-sm-2" for="inlineFormCustomSelect"><strong>Gender</strong></label>
+                                    <select class="custom-select mr-sm-2" id="gender" name="gender">
+                                        <option value="female" selected>Female</option>
+                                        <option value="male">Male</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row align-items-center">
+                                <div class="col-12 my-1">
+                                    <label class="mr-sm-2"
+                                        for="inlineFormCustomSelect"><strong>Ethnicity</strong></label>
+                                    <select class="custom-select mr-sm-2" id="ethnicity" name="ethnicity">
+                                        <option value="afrocolombian" selected>Afro-Colombian</option>
+                                        <option value="indigenous">Indigenous</option>
+                                        <option value="mixedrace">Mixed race</option>
+                                        <option value="white">White</option>
+                                        <option value="mulatto">Mulatto</option>
+                                        <option value="other">Other</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="formGroupExampleInput"><strong>Age</strong></label>
+                                <input type="number" min="0" class="form-control" id="age" name="age"
+                                    placeholder="Write patient age">
+                            </div>
+
+                            <div class="form-row align-items-center">
+                                <div class="col-12 my-1">
+                                    <label class="mr-sm-2" for="inlineFormCustomSelect"><strong>Infection
+                                            Department</strong></label>
+                                    <select class="custom-select mr-sm-2" id="department" name="department">
+                                        <option value="narino" selected>Nariño</option>
+                                        <option value="choco">Chocó</option>
+                                        <option value="cauca">Cauca</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formGroupExampleInput"><strong>Weight</strong></label>
+                                <input type="number" min="0" class="form-control" id="weight" name="weight"
+                                    placeholder="Write patient weight">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formGroupExampleInput"><strong>Height</strong></label>
+                                <input type="number" min="0" class="form-control" id="height" name="height"
+                                    placeholder="Write patient height">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="form-row align-items-center">
-                    <div class="col-12 my-1">
-                        <label class="mr-sm-2" for="inlineFormCustomSelect">Choose patient ethnicity</label>
-                        <select class="custom-select mr-sm-2" id="ethnicity" name="ethnicity">
-                            <option value="afrocolombian" selected>Afro-Colombian</option>
-                            <option value="indigenous">Indigenous</option>
-                            <option value="mixedrace">Mixed race</option>
-                            <option value="white">White</option>
-                            <option value="mulatto">Mulatto</option>
-                            <option value="other">Other</option>
+                <br><br><br>
 
-                        </select>
+                <div class="p-1 mb-2 footer_color text-white">
+                    <h1>Injury Data</h1>
+                </div>
+
+                <div class="container bg-light">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <div class="form-group">
+                                <label for="formGroupExampleInput"><strong>Time of Evolution</strong></label>
+                                <input type="number" min="0" class="form-control" id="time" name="time"
+                                    placeholder="Write Time of evolution">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formGroupExampleInput"><strong>Number of Active Injuries</strong></label>
+                                <input type="number" min="0" class="form-control" id="active" name="active"
+                                    placeholder="Number of Active Injuries">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formGroupExampleInput"><strong>eb_lc_ulcera_area_1</strong></label>
+                                <input type="number" min="0" class="form-control" id="eb_lc_ulcera_area_1"
+                                    name="eb_lc_ulcera_area_1" placeholder="Write eb_lc_ulcera_area_1">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="formGroupExampleInput"><strong>Glucantime Dosis</strong></label>
+                                <input type="number" min="0" class="form-control" id="dosis" name="dosis"
+                                    placeholder="Write Glucantime Dosis Prescripted">
+                            </div>
+
+
+
+
+                        </div>
                     </div>
                 </div>
 
 
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Age</label>
-                    <input type="number" min="0" class="form-control" id="age" name="age"
-                        placeholder="Write patient age">
-                </div>
-
-                <div class="form-row align-items-center">
-                    <div class="col-12 my-1">
-                        <label class="mr-sm-2" for="inlineFormCustomSelect">Choose infection department</label>
-                        <select class="custom-select mr-sm-2" id="department" name="department">
-                            <option value="narino" selected>Nariño</option>
-                            <option value="choco">Chocó</option>
-                            <option value="cauca">Cauca</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </div>
-
-
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre"
-                        placeholder="Escriba el nombre del restaurante">
-                </div>
-
-
-
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Lugar</label>
-                    <input type="text" class="form-control" id="lugar" name="lugar"
-                        placeholder="Escriba el lugar donde está el restaurante">
-                </div>
-
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Dirección</label>
-                    <input type="text" class="form-control" id="direccion" name="direccion"
-                        placeholder="Escriba la dirección del restaurante">
-                </div>
-
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Teléfono</label>
-                    <input type="text" class="form-control" id="telefono" name="telefono"
-                        placeholder="Escriba la dirección del restaurante">
-                </div>
-
-                <label for="">¿ Tiene domicilio ?</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="options" id="options1" value="si" checked>
-                    <label class="form-check-label" for="exampleRadios1">Si</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="options" id="options2" value="no">
-                    <label class="form-check-label" for="exampleRadios2">No</label>
-                </div>
-
                 <br>
-                <label for="">Sube el logo del restaurante</label>
-                <div class="row">
-                    <div class="col"><input type="file" name="logo"></div>
-                </div>
-
-
-                <br>
-                <label for="">Sube el menú del restaurante</label>
-                <div class="row">
-                    <div class="col"><input type="file" name="menu"></div>
-                </div>
-
-                <br>
-                <button type="submit" class="btn btn-danger text-white">Enviar</button>
+                <button type="submit" class="btn footer_color text-dark btn-lg">Submit Data</button>
                 <br><br>
         </div>
 
