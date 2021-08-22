@@ -14,7 +14,7 @@ def prediction():
         ethnicity = request.form['ethnicity']
         age = request.form['age']
         infection_department = request.form['department']
-        weight = request.form['weight']
+        #weight = request.form['weight']
         height = request.form['height']
 
         time = request.form['time']
@@ -22,10 +22,9 @@ def prediction():
         eb_lc_ulcera_area_1 = request.form['eb_lc_ulcera_area_1']
         dosis = request.form['dosis']
 
-        data = [gender , ethnicity, age, infection_department, weight, height,
+        data = [gender , ethnicity, age, infection_department, height,
                 time, active, eb_lc_ulcera_area_1, dosis]
-        ml.get_data(data)
+        ml.push_data(data)
         return render_template("results.html", data=data)
     else:
-        ml.show("Juan")
         return render_template("prediction.html")
