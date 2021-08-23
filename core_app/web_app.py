@@ -24,7 +24,8 @@ def prediction():
 
         data = [gender , ethnicity, age, infection_department, height,
                 time, active, eb_lc_ulcera_area_1, dosis]
-        ml.push_data(data)
-        return render_template("results.html", data=data)
+        
+        pred = ml.push_data(data)
+        return render_template("results.html", pred = pred)
     else:
         return render_template("prediction.html")

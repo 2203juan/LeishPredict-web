@@ -1,9 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% for i in data %}
-<li class="list-group-item">
-    {{ i }}
-</li>
-{% endfor %}
+{% if pred is sameas true %}
+<br><br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-success text-center" role="alert">
+                It seems like a patient who <strong>cures</strong>!!
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-danger text-center" role="alert">
+                It seems like a patient who <strong>fails</strong>!!
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br>
+{% endif %}
 {% endblock %}
