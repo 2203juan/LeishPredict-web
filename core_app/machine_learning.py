@@ -1,6 +1,6 @@
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
-from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
 
 
 def push_data(data):
@@ -43,16 +43,17 @@ def build_model(model, X_train, y_train):
     
     return clf
 def load_model(data):
-    smote = pd.read_excel("fake_smote.xlsx")
+    augmented = pd.read_excel("fake_ADASYN.xlsx")
     original = pd.read_excel("preprocesado.xlsx")
 
-    df = smote.append(original)
+    df = augmented.append(original)
 
     labels = df["cure_or_fail"]
     del df['cure_or_fail']
 
-    svm = SVC(C = 10, gamma = 0.001, kernel = 'linear')
-    print(df, labels)
-    model = build_model(svm, df, labels)
+    knn = KNeighborsClassifier()
+    
+    #print(df, labels)
+    model = build_model(knn, df, labels)
 
     return model.predict(data)

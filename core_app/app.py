@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 import machine_learning as ml
+
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -29,3 +31,4 @@ def prediction():
         return render_template("results.html", pred = pred)
     else:
         return render_template("prediction.html")
+
